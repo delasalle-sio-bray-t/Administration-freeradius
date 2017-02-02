@@ -1,0 +1,193 @@
+html {
+	height: 100%;
+}
+body {
+	font: 0.8em Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 30px 0 0 0;
+	background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(210, 210, 210)));
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(210, 210, 210));
+}
+
+div#page {
+	text-align: center;
+	width: 800px;
+	margin: 0px auto;
+	padding: 0;
+	border: #000 1px solid;
+
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-o-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+	background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(210, 210, 210)));
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(225, 225, 225));
+}
+/* transformation des liens hypertextes des menus en boutons */
+a.bouton-menu {
+	font: 1.1em Arial, Helvetica, sans-serif;
+	margin: 20px auto;
+	display: block;
+	width: 300px;
+	background: #ccc;
+	text-align: center;
+	text-decoration: none;
+	color: #0b4c8e;
+	font-weight: bold;
+	padding: 5px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-o-border-radius: 7px;
+	-ms-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+	background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background: -webkit-gradient(linear, right top, right bottom, from(rgb(255, 255, 255)), to(rgb(210, 210, 210)));
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(210, 210, 210));
+	text-shadow: 0 1px 0 #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	-o-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+/* ------------------------ Mise en forme du tableau ---------------------------- */
+
+/* Styles des tableau */
+table{
+	border-spacing:0;
+
+	width:700px;
+	margin:30px auto 30 auto;
+
+	}
+/* styles des tableaux ayant le propriete class "tableau" */
+.tableau{
+	border: 1px solid #0b4c8e;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 1px 3px 3px #ccc;
+	-moz-box-shadow: 1px 3px 3px #ccc;
+	box-shadow:1px 3px 3px #ccc;
+
+
+}
+
+.tableau td, .tableau th{
+	border-left: 1px solid #0b4c8e;
+	border-top: 1px solid #0b4c8e;
+	border-bottom: 1px solid #0b4c8e;
+	padding: 5px;
+	text-align: center;
+}
+
+.tableau td:first-child, .tableau th:first-child{
+	border-left:none;
+}
+
+.tableau th{
+	border-top: none;
+border-bottom : none;
+}
+
+.tableau th{
+	font-weight:bold;
+	font-size:1em;
+
+	background:-moz-linear-gradient(top, rgb(255,255,255),rgb(210,210,210);)
+	background:-webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)),to(rgb(210,210,210)));
+	background:linear-gradient(to bottom, rgb(255,255,255), rgb(210,210,210));
+}
+.tableau th:first-child{
+	-moz-border-radius:10px 0 0 0 ;
+	-webkit-border-radius: 10px 0 0 0 ;
+	border-radius: 10px 0 0 0 ;
+}
+
+.tableau th:last-child{
+	-moz-border-radius:0 10px 0 0 ;
+	-webkit-border-radius: 0 10px 0 0 ;
+	border-radius: 0 10px 0 0 ;
+}
+.tableau tr:last-child td:first-child{
+	border-top: none;
+	border-bottom: none;
+}
+.tableau tr:last-child td:last-child{
+border-bottom:none;
+border-top:none;
+}
+
+/**************************Tableau utilisateur******************************************/
+/* styles des tableaux ayant le propriete class "tableau1" */
+.tableau1{
+	border: 1px solid #0b4c8e;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 1px 3px 3px #ccc;
+	-moz-box-shadow: 1px 3px 3px #ccc;
+	box-shadow:1px 3px 3px #ccc;
+
+
+}
+
+.tableau1 td, .tableau1 th{
+	border-left: 1px solid #0b4c8e;
+	border-top: 1px solid #0b4c8e;
+	padding: 5px;
+	text-align: center;
+}
+
+.tableau1 td:first-child, .tableau1 th:first-child{
+	border-left:none;
+}
+
+.tableau1 th{
+	border-top: none;
+}
+.tableau1 td:first-child{
+	text-align:left;
+	
+}
+.tableau1 th{
+	font-weight:bold;
+	font-size:1em;
+
+	background:-moz-linear-gradient(top, rgb(255,255,255),rgb(210,210,210);)
+	background:-webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)),to(rgb(210,210,210)));
+	background:linear-gradient(to bottom, rgb(255,255,255), rgb(210,210,210));
+}
+.tableau1 th:first-child{
+	-moz-border-radius:10px 0 0 0 ;
+	-webkit-border-radius: 10px 0 0 0 ;
+	border-radius: 10px 0 0 0 ;
+}
+.tableau1 th:last-child{
+	-moz-border-radius:0 10px 0 0 ;
+	-webkit-border-radius: 0 10px 0 0 ;
+	border-radius: 0 10px 0 0 ;
+}
+.tableau1 tr:last-child td:first-child {
+	-moz-border-radius: 0 0 0 10px ;
+	-webkit-border-radius: 0 0 0 10px;
+	border-radius: 0 0 0 10px ;
+}
+.tableau1 tr:last-child td:last-child{
+	-moz-border-radius: 0 0 10px 0 ;
+	-webkit-border-radius: 0 0 10px 0 ;
+	border-radius: 0 0 10px 0 ;
+}
+
+.tableau1 tr:hover{
+	background-color:#fbf8e9;
+}

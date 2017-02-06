@@ -37,6 +37,8 @@ updateVlan();
          </tr>
 
          <tr>
+           <td><input type="radio" name="vlanRadio" value="true" id="VlanSwitch"/><label for="VlanSwitch" >VLAN déjà sur le switch </label><br />
+           <input type=radio name="vlanRadio" value="false" id="pasVlanSwitch" /><label for="pasVlanSwitch" >Nouveau VLAN</label></td>
            <td><input type="submit" value="Envoyer"></td>
           </tr>
       </table>

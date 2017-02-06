@@ -32,6 +32,7 @@ if ($nb != 0){
 else {
 
   //Préparation de la requete d'insertion de l'utilisateur
+
   $req_pre = $cnx->prepare("INSERT into radgroupreply (groupname, attribute, op, value) values (:nom, 'Tunnel-Private-Group-Id', '=', :num),
   (:nom, 'Tunnel-Type', '=', '13'),
   (:nom, 'Tunnel-Medium-Type', '=', '6');");
@@ -40,8 +41,15 @@ else {
   $req_pre->bindValue(':nom', utf8_decode($nomVlan), PDO::PARAM_STR);
   $req_pre->execute();
 
- //$results = shell_exec("expect script/scriptCreaVlan.sh $ip $Username $password $enPass $numVlan $nomVlan | head -n -3 | tail -n +24 ");
+  if ($_POST['vlanRadio'] == "true"){
+
+
+
+  $results = shell_exec("expect script/scriptCreaVlan.sh $ip $Username $password $enPass $numVlan $nomVlan | head -n -3 | tail -n +24 ");
   //echo "<pre>".$results . "</pre>";
+
+}
+
 
   header("Location: vlan.php");
 

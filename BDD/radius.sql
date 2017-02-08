@@ -24,7 +24,7 @@ DELIMITER $$
 --
 -- Functions
 --
-CREATE DEFINER=`root`@`localhost` FUNCTION `nomVlan`(`numVlan` VARCHAR(3)) RETURNS varchar(64) CHARSET latin1
+CREATE DEFINER=`root`@`localhost` FUNCTION `nomVlan`(`numVlan` VARCHAR(4)) RETURNS varchar(64) CHARSET latin1
     READS SQL DATA
 BEGIN
 DECLARE rep Varchar(64);
@@ -33,12 +33,12 @@ SELECT groupname into rep from radgroupreply where attribute = 'Tunnel-Private-G
 return rep;
 END$$
 
-CREATE DEFINER=`root`@`localhost` FUNCTION `vlanExist`(`numVlan` VARCHAR(3)) RETURNS varchar(11) CHARSET latin1
+CREATE DEFINER=`root`@`localhost` FUNCTION `vlanExist`(`numVlan` VARCHAR(4)) RETURNS varchar(11) CHARSET latin1
 begin
 
 IF EXISTS (SELECT * FROM radgroupreply WHERE attribute = 'Tunnel-Private-Group-Id' AND value = numVlan) THEN
     return 1;
-ELSE 
+ELSE
    return 0;
 END IF;
 END$$

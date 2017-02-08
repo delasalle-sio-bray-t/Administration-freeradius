@@ -124,9 +124,9 @@ SET numVlan = SUBSTRING_INDEX(SUBSTRING_INDEX(NEW.Message, ' ', 4), ' ', -1);
 SELECT radius.vlanExist(numVlan) into existe;
 if existe = 0 then
 INSERT INTO radius.radgroupreply (groupname, attribute, op, value) VALUES
-(numVlan, 'Tunnel-Private-Group-Id', '=', numVlan),
-(numVlan, 'Tunnel-Type', '=', '13'),
-(numVlan, 'Tunnel-Medium-Type', '=', '6');
+(concat('VLAN ',numVlan), 'Tunnel-Private-Group-Id', '=', numVlan),
+(concat('VLAN ',numVlan), 'Tunnel-Type', '=', '13'),
+(concat('VLAN ',numVlan), 'Tunnel-Medium-Type', '=', '6');
 -- Fin if existe = 0
 end if;
 -- fin if message = vlan
